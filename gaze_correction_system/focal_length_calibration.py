@@ -16,14 +16,14 @@ import numpy as np
 
 
 # Please place your head in front of the camera about 50 cm
-d = 50 # cm
+d = 60 # cm
 
 # Please set your interpupillary distance (the distance between two eyes) in the code
 # or you can just set it to the average distance 6.3 cm
 P_IPD = 6.3 # cm
 
 # default image resolution
-video_res = [640,480]
+video_res = [1280,720]
 
 # define the face detector from Dlib package
 detector = dlib.get_frontal_face_detector()
@@ -69,7 +69,7 @@ def get_eye_pos(shape, pos = "L"):
 # In[9]:
 
 
-vs = cv2.VideoCapture(0)
+vs = cv2.VideoCapture(1)
 
 while True:
     ret, recv_frame = vs.read()

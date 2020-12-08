@@ -14,8 +14,8 @@ import socket
 import struct
 import numpy as np
 import tensorflow as tf
-from win32api import GetSystemMetrics
-import win32gui
+# from win32api import GetSystemMetrics
+# import win32gui
 
 from threading import Thread, Lock
 import multiprocessing as mp
@@ -42,7 +42,7 @@ depth = -50
 # for monitoring
 
 # environment parameter
-Rs = (GetSystemMetrics(0),GetSystemMetrics(1))
+Rs = (1400,900)
 
 
 # In[ ]:
@@ -363,7 +363,7 @@ class gaze_redirection_system:
         # def main():
         redir = False
         size_window = [659,528]
-        vs = cv2.VideoCapture(0)
+        vs = cv2.VideoCapture(1)
         vs.set(3, size_video[0])
         vs.set(4, size_video[1])
         t = time.time()
